@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="李宏毅课程笔记,">
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="随便写写">
-<meta property="og:type" content="website">
-<meta property="og:title" content="mingyasanren&#39;s blog">
-<meta property="og:url" content="https://zhoumingya.github.io/index.html">
+<meta name="description" content="Adaboost&amp;#x4E3B;&amp;#x8981;&amp;#x601D;&amp;#x8DEF; Boosting&amp;#x7684;&amp;#x4E3B;&amp;#x8981;&amp;#x529F;&amp;#x80FD;&amp;#x662F;&amp;#x5BF9;&amp;#x80FD;&amp;#x529B;&amp;#x5F88;&amp;#x5F31;&amp;#x7684;&amp;#x6A21;&amp;#x578B;&amp;#x60F3;&amp;#x529E;&amp;#x6CD5;&amp;#x63D0;&amp;#x5347">
+<meta name="keywords" content="李宏毅课程笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="李宏毅课程笔记 ML Lecture 27 Ensemble">
+<meta property="og:url" content="https://zhoumingya.github.io/2019/03/20/李宏毅课程笔记-ML-Lecture-27-Ensemble/index.html">
 <meta property="og:site_name" content="mingyasanren&#39;s blog">
-<meta property="og:description" content="随便写写">
+<meta property="og:description" content="Adaboost&amp;#x4E3B;&amp;#x8981;&amp;#x601D;&amp;#x8DEF; Boosting&amp;#x7684;&amp;#x4E3B;&amp;#x8981;&amp;#x529F;&amp;#x80FD;&amp;#x662F;&amp;#x5BF9;&amp;#x80FD;&amp;#x529B;&amp;#x5F88;&amp;#x5F31;&amp;#x7684;&amp;#x6A21;&amp;#x578B;&amp;#x60F3;&amp;#x529E;&amp;#x6CD5;&amp;#x63D0;&amp;#x5347">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhoumingya/resources/master/err_rate_upper_bound.png">
+<meta property="og:updated_time" content="2019-03-21T05:29:21.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mingyasanren&#39;s blog">
-<meta name="twitter:description" content="随便写写">
+<meta name="twitter:title" content="李宏毅课程笔记 ML Lecture 27 Ensemble">
+<meta name="twitter:description" content="Adaboost&amp;#x4E3B;&amp;#x8981;&amp;#x601D;&amp;#x8DEF; Boosting&amp;#x7684;&amp;#x4E3B;&amp;#x8981;&amp;#x529F;&amp;#x80FD;&amp;#x662F;&amp;#x5BF9;&amp;#x80FD;&amp;#x529B;&amp;#x5F88;&amp;#x5F31;&amp;#x7684;&amp;#x6A21;&amp;#x578B;&amp;#x60F3;&amp;#x529E;&amp;#x6CD5;&amp;#x63D0;&amp;#x5347">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/zhoumingya/resources/master/err_rate_upper_bound.png">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://zhoumingya.github.io/">
+  <link rel="canonical" href="https://zhoumingya.github.io/2019/03/20/李宏毅课程笔记-ML-Lecture-27-Ensemble/">
 
 
 
 
 
-  <title>mingyasanren's blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>李宏毅课程笔记 ML Lecture 27 Ensemble | mingyasanren's blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -143,8 +147,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -217,9 +220,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -249,9 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/20/李宏毅课程笔记-ML-Lecture-27-Ensemble/" itemprop="url">李宏毅课程笔记 ML Lecture 27 Ensemble</a></h1>
+          <h1 class="post-title" itemprop="name headline">李宏毅课程笔记 ML Lecture 27 Ensemble</h1>
         
 
         <div class="post-meta">
@@ -323,9 +324,7 @@
       
 
       
-        
-          
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous"><h1 id="adaboost&#x4E3B;&#x8981;&#x601D;&#x8DEF;">Adaboost&#x4E3B;&#x8981;&#x601D;&#x8DEF;</h1>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous"><h1 id="adaboost&#x4E3B;&#x8981;&#x601D;&#x8DEF;">Adaboost&#x4E3B;&#x8981;&#x601D;&#x8DEF;</h1>
 <p>Boosting&#x7684;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x5BF9;&#x80FD;&#x529B;&#x5F88;&#x5F31;&#x7684;&#x6A21;&#x578B;&#x60F3;&#x529E;&#x6CD5;&#x63D0;&#x5347;&#x5B83;&#x7684;performance:Improving Weak Classifiers. &#x4E3B;&#x8981;&#x601D;&#x8DEF;&#x5982;&#x4E0B;: &#x539F;&#x672C;&#x7684;&#x6A21;&#x578B;f&#x80FD;&#x529B;&#x975E;&#x5E38;&#x5F31;,&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x62DF;&#x5408;&#x6570;&#x636E; &#x90A3;&#x4E48;&#x5C31;&#x5C06;&#x4E00;&#x7CFB;&#x5217;f&#x7EC4;&#x5408;&#x8D77;&#x6765;&#x4F7F;&#x7528; &#x867D;&#x7136;&#x6BCF;&#x4E2A;f&#x7684;&#x529F;&#x80FD;&#x90FD;&#x4E0D;&#x5F3A;(&#x9519;&#x8BEF;&#x7387;&#x7A0D;&#x5927;&#x4E8E;50%,&#x7565;&#x597D;&#x4E8E;&#x968F;&#x673A;&#x731C;),&#x4F46;&#x662F;&#x591A;&#x4E2A;f&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x6700;&#x7EC8;&#x80FD;&#x8FBE;&#x5230;&#x5F88;&#x9AD8;&#x7684;&#x6B63;&#x786E;&#x7387;</p>
 <h1 id="&#x6D41;&#x7A0B;">&#x6D41;&#x7A0B;</h1>
 <p>Bagging&#x4E2D;&#x591A;&#x4E2A;&#x6A21;&#x578B;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>f</mi><mn>2</mn></msub><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">f_1, f_2 ...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span>&#x662F;&#x72EC;&#x7ACB;&#x8BAD;&#x7EC3;&#x7684;,sample&#x4E86;&#x5404;&#x6A21;&#x578B;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x540E;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x8BAD;&#x7EC3; Boosting&#x4E2D;&#x662F;&#x73B0;&#x6709;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x5668;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>,&#x7136;&#x540E;&#x8BAD;&#x7EC3;&#x4E0B;&#x4E00;&#x4E2A;&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#x4E92;&#x8865;&#x7684;&#x5206;&#x7C7B;&#x5668;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">f_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>,&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;... &#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x4E92;&#x8865;&#x6027;&#x662F;&#x901A;&#x8FC7;re-weighting train data&#x5F97;&#x5230;&#x7684;,&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x4FEE;&#x6539;&#x4E86;&#x76EE;&#x6807;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570; &#x5BF9;&#x4E8E;&#x666E;&#x901A;&#x7684;&#x6A21;&#x578B;,&#x5176;&#x635F;&#x5931;&#x51FD;&#x6570;&#x5B9A;&#x4E3A;<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable side="right"><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mrow><mi>L</mi><mo>(</mo><mi>f</mi><mo>)</mo><mo>=</mo><munder><mo>&#x2211;</mo><mi>n</mi></munder><mrow><mi>l</mi><mo>(</mo><mi>f</mi><mo>(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo separator="true">,</mo><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow></mtd></mlabeledtr></mtable><annotation encoding="application/x-tex">L(f)=\sum_n{l(f(x_n),\hat{y})}\tag{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.3000100000000003em;vertical-align:-1.250005em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8999949999999999em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.250005em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span><span class="tag"><span class="strut" style="height:2.3000100000000003em;vertical-align:-1.250005em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span></span><span class="mord">)</span></span></span></span></span></span> re-weighting&#x540E;&#x6BCF;&#x4E2A;&#x6837;&#x672C;&#x5728;&#x635F;&#x5931;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x6743;&#x91CD;&#x662F;&#x4E0D;&#x540C;&#x7684;,&#x635F;&#x5931;&#x51FD;&#x6570;&#x53D8;&#x4E3A;:<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable side="right"><mlabeledtr><mtd><mtext>(2)</mtext></mtd><mtd><mrow><mi>L</mi><mo>(</mo><mi>f</mi><mo>)</mo><mo>=</mo><munder><mo>&#x2211;</mo><mi>n</mi></munder><mrow><msub><mi>u</mi><mi>n</mi></msub><mi>l</mi><mo>(</mo><mi>f</mi><mo>(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mo separator="true">,</mo><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>)</mo></mrow></mrow></mtd></mlabeledtr></mtable><annotation encoding="application/x-tex">L(f)=\sum_n{u_nl(f(x_n),\hat{y})}\tag{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.3000100000000003em;vertical-align:-1.250005em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8999949999999999em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.250005em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span><span class="tag"><span class="strut" style="height:2.3000100000000003em;vertical-align:-1.250005em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">2</span></span><span class="mord">)</span></span></span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>&#x5F0F;&#x662F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span>&#x5F0F;&#x7684;&#x7279;&#x6B8A;&#x60C5;&#x51B5;,&#x521D;&#x59CB;&#x65F6;&#x5019;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>u</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">u_n=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>,&#x5373;&#x6240;&#x6709;&#x6837;&#x672C;&#x91CD;&#x8981;&#x6027;&#x76F8;&#x540C;</p>
@@ -438,8 +437,6 @@ c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1s-109,-253,-109,-253c-72.7,-168,-109.3,
 -252,-110,-252c-10.7,8,-22,16.7,-34,26c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26
 s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.30499999999999994em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span>,&#x7531;&#x6B64;&#x53EF;&#x5F97;Training Error Rate&#x662F;&#x968F;&#x7740;t&#x8FED;&#x4EE3;&#x800C;&#x51CF;&#x5C11;&#x7684;</p>
 
-          
-        
       
     </div>
     
@@ -449,19 +446,49 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpeg" alt="mingyasanren 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/李宏毅课程笔记/" rel="tag"># 李宏毅课程笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -471,10 +498,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -482,6 +510,10 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
 
 
           
+
+  
+
+
 
         </div>
         
@@ -502,8 +534,17 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -579,6 +620,22 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#adaboost主要思路"><span class="nav-number">1.</span> <span class="nav-text">Adaboost主要思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流程"><span class="nav-number">2.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#收敛性证明"><span class="nav-number">3.</span> <span class="nav-text">收敛性证明</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -712,11 +769,32 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
@@ -769,43 +847,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
   
 
 
